@@ -51,10 +51,18 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: "👾")
+        //let labelNode = SKLabelNode(text: "👾")
+        let labelNode = SKLabelNode(text: getRandomText())
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;
+    }
+    
+    func getRandomText() -> String
+    {
+        let arr = ["A", "B", "C", "D"]
+        
+        return arr[Int.random(in: 0...3)]
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
