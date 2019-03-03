@@ -12,6 +12,7 @@ import ARKit
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
+    
     var userInput = ""
     
     //scene view for AR
@@ -85,9 +86,10 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
         let labelNode = SKLabelNode(text: userInput)
+        labelNode.fontName = "Arial"
+        labelNode.fontSize = 11
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
-        
         return labelNode;
     }
     
