@@ -8,5 +8,6 @@ target 'Stickeee' do
   # Pods for Stickeee
   pod 'SnapSDK'
   pod 'SwiftSocket'
+  pod 'Firebase/Core'
 
 end

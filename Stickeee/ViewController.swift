@@ -82,7 +82,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        return SKSpriteNode(imageNamed: SpawnManager.selectedSticker)
+        return SKLabelNode(text: userInput)
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
