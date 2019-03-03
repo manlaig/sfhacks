@@ -10,9 +10,34 @@ import UIKit
 import SpriteKit
 import ARKit
 
-class ViewController: UIViewController, ARSKViewDelegate {
+class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
+    //scene view for AR
     @IBOutlet var sceneView: ARSKView!
+    
+    //text box
+    @IBOutlet weak var textBox: UITextField!
+    
+    
+    //after pressing done on text box
+    @IBAction func pressedEnd(_ sender: Any) {
+        textBox.isHidden = true //hides text box
+        button.isHidden = false //shows button
+        textBox.resignFirstResponder()
+    }
+    
+    //button to show textbox
+    @IBOutlet weak var button: UIButton!
+    
+    //action from pressing button
+    @IBAction func showButton(_ sender: Any)
+    {
+        textBox.isHidden = false //shows text box
+        button.isHidden = true //hides button
+        textBox.becomeFirstResponder()
+    }
+    
+    var userInput = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -32,6 +57,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
+        
+        print(self.userInput)
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -72,4 +99,5 @@ class ViewController: UIViewController, ARSKViewDelegate {
         // Reset tracking and/or remove existing anchors if consistent tracking is required
         
     }
+    
 }

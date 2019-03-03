@@ -103,7 +103,6 @@
 				85EF9D7B9FE9F13155A975BF /* Pods-Stickeee.debug.xcconfig */,
 				893C6961779C2070A5B7F43F /* Pods-Stickeee.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
