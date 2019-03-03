@@ -38,11 +38,6 @@ class Sticker
     
     static func GetXY(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Dictionary<String, Double>
     {
-        if(lon1 == lon2 && lat1 == lat2)
-        {
-            return ["x": 0, "y": 0]
-        }
-        
         var y = lat2 - lat1
         var x = lon2 - lon1
         
