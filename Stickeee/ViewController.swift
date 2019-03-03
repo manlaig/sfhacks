@@ -16,7 +16,6 @@ import CoreLocation
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
 {
     static var userInput = ""
-    static var spawnCount = true
 
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
@@ -43,16 +42,13 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         textBox.isHidden = false //shows text box
         button.isHidden = true //hides button
         textBox.becomeFirstResponder()
-        if ViewController.spawnCount
-        {
-            ViewController.spawnCount = false
-            addListenerToDatabase()
-        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        addListenerToDatabase()
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -106,8 +102,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     
     func newStickerFromDatabase(newLat: Double, newLon: Double, label: String)
     {
-        
-        
         // Add a new sticker
         let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
         if currLocation != nil
@@ -161,7 +155,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         let labelNode = SKLabelNode(text: anchor.name)
         labelNode.fontName = "Arial"
         labelNode.fontSize = 68
-        labelNode.color = UIColor.yellow
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;

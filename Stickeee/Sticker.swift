@@ -38,11 +38,6 @@ class Sticker
     
     static func GetXY(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Dictionary<String, Double>
     {
-        if(lon1 == lon2 && lat1 == lat2)
-        {
-            return ["x": 0, "y": 0]
-        }
-        
         var y = lat2 - lat1
         var x = lon2 - lon1
         
@@ -50,14 +45,6 @@ class Sticker
         x = x / sqrt(y*y + x*x)
         print("x: " + String(x) + " y: " + String(y))
         
-        /*let heading = (UIApplication.shared.delegate as! AppDelegate).getMagneticHeading()
-        
-        var t: Double = 1.0
-        if x != 0
-        {
-            t = atan(y/x)
-        }
-        print("t: " + String(t))*/
         let dist = LatLonToMetres(lat1: lat1, lon1: lon1, lat2: lat2, lon2: lon2)
         print("Dist: " + String(dist))
         return ["x": dist * y, "y": dist * x]
