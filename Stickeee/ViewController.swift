@@ -11,6 +11,7 @@ import SpriteKit
 import ARKit
 import FirebaseDatabase
 import Firebase
+import SCSDKCreativeKit
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
 {
@@ -31,6 +32,16 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         ViewController.userInput = textBox.text!
     }
     
+    @IBAction func snappybutton(_ sender: Any) {
+        let url = URL(string: "https://www.stickplace.net/image/getSnapChatImage")
+        let sticker = SCSDKSnapSticker(stickerUrl: url!, isAnimated: false)
+        let snap = SCSDKNoSnapContent()
+        
+        snap.caption = ViewController.userInput
+        snap.sticker = sticker
+        let api = SCSDKSnapAPI(content: snap)
+        api.startSnapping{(error) in}
+    }
     
     //button to show textbox
     @IBOutlet weak var button: UIButton!

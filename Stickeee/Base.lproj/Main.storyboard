@@ -33,8 +33,18 @@
                                     <action selector="pressedEnd:" destination="BV1-FR-VrT" eventType="primaryActionTriggered" id="uAa-vg-lfB"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nd7-Gs-6iC">
+                                <rect key="frame" x="307" y="33" width="52" height="53"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="53" id="cDT-h1-6SR"/>
+                                </constraints>
+                                <state key="normal" title="Button" image="snappy"/>
+                                <connections>
+                                    <action selector="snappybutton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="V2S-fm-gdu"/>
+                                </connections>
+                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-Gv-5fp">
-                                <rect key="frame" x="152" y="577" width="71" height="70"/>
+                                <rect key="frame" x="149" y="577" width="77" height="70"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="70" id="lLQ-IA-lET"/>
                                 </constraints>
@@ -55,9 +65,12 @@
                             <constraint firstItem="hW4-Gv-5fp" firstAttribute="centerX" secondItem="EO5-fy-WZq" secondAttribute="centerX" id="U9b-Mz-hwa"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
-                            <constraint firstItem="hW4-Gv-5fp" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="152" id="kI2-XL-Rw2"/>
+                            <constraint firstItem="nd7-Gs-6iC" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="13" id="fgP-5T-nPW"/>
+                            <constraint firstItem="hW4-Gv-5fp" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="149" id="kI2-XL-Rw2"/>
                             <constraint firstItem="hW4-Gv-5fp" firstAttribute="centerX" secondItem="Uk8-Ig-kaO" secondAttribute="centerX" id="nze-8Q-Of9"/>
+                            <constraint firstItem="nd7-Gs-6iC" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="307" id="rD1-pG-fDd"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
+                            <constraint firstItem="nd7-Gs-6iC" firstAttribute="trailing" secondItem="U0K-SW-4ec" secondAttribute="trailingMargin" id="w43-CW-Vkv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
                     </view>
@@ -74,6 +87,7 @@
     </scenes>
     <resources>
         <image name="keyboard" width="1200" height="1200"/>
+        <image name="snappy" width="304" height="286"/>
     </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
