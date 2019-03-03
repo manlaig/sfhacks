@@ -11,6 +11,7 @@ import SpriteKit
 import ARKit
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
+    var userInput = ""
     
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
@@ -24,7 +25,9 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         textBox.isHidden = true //hides text box
         button.isHidden = false //shows button
         textBox.resignFirstResponder()
+        userInput = textBox.text!
     }
+    
     
     //button to show textbox
     @IBOutlet weak var button: UIButton!
@@ -37,7 +40,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         textBox.becomeFirstResponder()
     }
     
-    var userInput = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -57,8 +59,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
-        
-        print(self.userInput)
+
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -82,7 +83,10 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        return SKLabelNode(text: userInput)
+        let labelNode = SKLabelNode(text: userInput)
+        labelNode.horizontalAlignmentMode = .center
+        labelNode.verticalAlignmentMode = .center
+        return labelNode;
     }
     
     func session(_ session: ARSession, didFailWithError error: Error) {
