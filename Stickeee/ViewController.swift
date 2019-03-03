@@ -47,7 +47,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //Client()
         addListenerToDatabase()
         
         // Set the view's delegate
@@ -62,6 +61,11 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
             sceneView.presentScene(scene)
         }
 
+    }
+    
+    func drawPreviousStickers()
+    {
+        let ref = Database.database().reference()
     }
     
     func addListenerToDatabase()
