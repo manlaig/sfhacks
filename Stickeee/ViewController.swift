@@ -11,6 +11,7 @@ import SpriteKit
 import ARKit
 import FirebaseDatabase
 import Firebase
+import SCSDKCreativeKit
 import CoreLocation
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
@@ -33,6 +34,16 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         ViewController.userInput = textBox.text!
     }
     
+    @IBAction func snappybutton(_ sender: Any) {
+        let url = URL(string: "https://www.stickplace.net/image/getSnapChatImage")
+        let sticker = SCSDKSnapSticker(stickerUrl: url!, isAnimated: false)
+        let snap = SCSDKNoSnapContent()
+        
+        snap.caption = ViewController.userInput
+        snap.sticker = sticker
+        let api = SCSDKSnapAPI(content: snap)
+        api.startSnapping{(error) in}
+    }
     
     //button to show textbox
     @IBOutlet weak var button: UIButton!
@@ -131,8 +142,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
             {
                 print("lat20: " + String(currLocation.coordinate.latitude))
                 var translation = matrix_identity_float4x4
-                //print("\n"+String(currLocation.coordinate.latitude) + " " + String(currLocation.coordinate.longitude))
-                //print("\n" + String(newLat) + " " + String(newLon))
                 
                 let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
                 
