@@ -159,6 +159,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework"
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework"
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
@@ -168,6 +169,7 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework"
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework"
   install_framework "${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework"
+  install_framework "${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework"
   install_framework "${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework"
 fi
 if [ "${COCOAPODS_PARALLEL_CODE_SIGN}" == "true" ]; then
