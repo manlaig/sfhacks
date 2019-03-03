@@ -43,11 +43,11 @@ class Sticker
             return ["x": 0, "y": 0]
         }
         
-        let y = lat2 - lat1
-        let x = lon2 - lon1
+        var y = lat2 - lat1
+        var x = lon2 - lon1
         
-        y / sqrt(y*y + x*x)
-        x / sqrt(y*y + x*x)
+        y = y / sqrt(y*y + x*x)
+        x = x / sqrt(y*y + x*x)
         print("x: " + String(x) + " y: " + String(y))
         
         /*let heading = (UIApplication.shared.delegate as! AppDelegate).getMagneticHeading()
