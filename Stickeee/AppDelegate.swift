@@ -64,4 +64,3 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         print("Quitting application")
     }
 }
-

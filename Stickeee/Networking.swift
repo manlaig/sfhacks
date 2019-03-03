@@ -41,9 +41,6 @@ class Networking
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
         request.httpMethod = "POST"
         let parameters: [String: Double] = [
-            //"posx": sticker?.position.columns.3.x ?? -1,
-            //"posy": sticker?.position.columns.3.y ?? -1,
-            //"posz": sticker?.position.columns.3.z ?? -1,
             "lat": sticker?.lat ?? 0,
             "lon": sticker?.lon ?? 0
         ]
@@ -61,7 +58,7 @@ class Networking
                     return
             }
             
-            /*guard (200 ... 299) ~= response.statusCode else {                    // check for http errors
+            /*guard (200 ... 299) ~= response.statusCode else {
                 print("statusCode should be 2xx, but is \(response.statusCode)")
                 print("response = \(response)")
                 return

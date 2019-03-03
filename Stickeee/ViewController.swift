@@ -9,7 +9,6 @@
 import UIKit
 import SpriteKit
 import ARKit
-import CoreLocation
 
 class ViewController: UIViewController, ARSKViewDelegate {
     
