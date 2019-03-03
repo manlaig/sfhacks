@@ -7,15 +7,37 @@
 //
 
 import UIKit
+import CoreLocation
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
-
+class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
+{
     var window: UIWindow?
-
+    var locationManager: CLLocationManager!
+    
+    func getLocation() -> CLLocation
+    {
+        print("Getting location")
+        var currentLocation: CLLocation!
+        
+        if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
+            CLLocationManager.authorizationStatus() ==  .authorizedAlways)
+        {
+            currentLocation = locationManager.location
+        }
+        return currentLocation
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        // Override point for customization after application launch
+        
+        locationManager = CLLocationManager()
+        locationManager.delegate = self
+        locationManager.desiredAccuracy=kCLLocationAccuracyBest
+        locationManager.startUpdatingLocation()
+        
+        locationManager.requestWhenInUseAuthorization()
+        
         return true
     }
 
@@ -39,8 +61,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+        print("Quitting application")
     }
-
-
 }
 

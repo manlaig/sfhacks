@@ -33,9 +33,16 @@ class Scene: SKScene {
             let transform = simd_mul(currentFrame.camera.transform, translation)
             
             // Add a new sticker
-            let sticker = Sticker(transform: transform, sceneView: sceneView)
-
-            Networking.UploadToServer(sticker: sticker)
+            let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
+            
+            if currLocation != nil
+            {
+                let sticker = Sticker(transform: transform, sceneView: sceneView, latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude)
+                Networking.UploadToServer(sticker: sticker)
+            } else
+            {
+                print("Location null")
+            }
         }
     }
 }

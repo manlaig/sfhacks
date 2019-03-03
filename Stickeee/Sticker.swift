@@ -13,12 +13,15 @@ import SpriteKit
 class Sticker
 {
     let anchor: ARAnchor
-    let position : simd_float4x4
     let image: String?
+    let lat: Double
+    let lon: Double
     
-    init(transform: simd_float4x4, sceneView: ARSKView)
+    init(transform: simd_float4x4, sceneView: ARSKView, latitude: Double, longitude: Double)
     {
-        position = transform
+        lat = latitude
+        lon = longitude
+        
         anchor = ARAnchor(transform: transform)
         image = SpawnManager.selectedSticker
         sceneView.session.add(anchor: anchor)

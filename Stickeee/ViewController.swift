@@ -9,6 +9,7 @@
 import UIKit
 import SpriteKit
 import ARKit
+import CoreLocation
 
 class ViewController: UIViewController, ARSKViewDelegate {
     
@@ -18,6 +19,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
         super.viewDidLoad()
         
         Client()
+        
+        Networking.SendToServer(endPoint: "addUser", sendrequest: "PUT")
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -44,7 +47,7 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        
+
         // Pause the view's session
         sceneView.session.pause()
     }
