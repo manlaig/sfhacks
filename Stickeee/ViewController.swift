@@ -16,6 +16,7 @@ import CoreLocation
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
 {
     static var userInput = ""
+    static var loaded = false
 
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
@@ -77,7 +78,6 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
             for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
             {
                 // later on prevent double spawn of stickers
-                //Networking.newStickerFromDatabase()
                 if let val = child.value as? Double
                 {
                     if lat == 10000
@@ -107,12 +107,29 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         if currLocation != nil
         {
             if let sceneView = self.view as? ARSKView {
+                if let currentFrame = sceneView.session.currentFrame
+                {
+                    print("lat10: " + String(currLocation.coordinate.latitude))
+                    var translation = matrix_identity_float4x4
+                    //print("\n"+String(currLocation.coordinate.latitude) + " " + String(currLocation.coordinate.longitude))
+                    //print("\n" + String(newLat) + " " + String(newLon))
+                    
+                    let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
+                    
+                    
+                    translation.columns.3.y = Float(xy["x"]!)
+                    translation.columns.3.z = Float(xy["y"]! - 0.2)
+                    translation.columns.3.w = Float(1)
+                    let transform = simd_mul(currentFrame.camera.transform, translation)
+                    print(currentFrame.camera.transform)
+                    Sticker(transform: transform, sceneView: sceneView, latitude: xy["y"]!, longitude: xy["x"]!, lab: label)
+                }
                 return
             }
             
             if let currentFrame = sceneView.session.currentFrame
             {
-                print("lat: " + String(currLocation.coordinate.latitude))
+                print("lat20: " + String(currLocation.coordinate.latitude))
                 var translation = matrix_identity_float4x4
                 //print("\n"+String(currLocation.coordinate.latitude) + " " + String(currLocation.coordinate.longitude))
                 //print("\n" + String(newLat) + " " + String(newLon))
