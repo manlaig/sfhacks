@@ -28,6 +28,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         }
         return currentLocation
     }
+    
+    func getHeading() -> CLLocationDirection
+    {
+        if let dir = locationManager.heading?.trueHeading
+        {
+            return dir
+        }
+        return -1
+    }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch
@@ -36,6 +45,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.delegate = self
         locationManager.desiredAccuracy=kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
+        locationManager.startUpdatingHeading()
         
         locationManager.requestWhenInUseAuthorization()
         

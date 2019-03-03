@@ -12,15 +12,10 @@ import ARKit
 import FirebaseDatabase
 import Firebase
 
-class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
-<<<<<<< HEAD
+class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
+{
     static var userInput = ""
-=======
-    
-    
-    var userInput = ""
->>>>>>> 10217d3b1e633186e61be20ff6b923bf19633949
-    
+
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
     
@@ -74,11 +69,33 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         let ref = Database.database().reference()
         
         ref.observe(.childAdded, with: { (snapshot) -> Void in
+            // just for max value
+            var lat: Double = 10000
+            var lon: Double = 10000
+            var string: String = ""
+            
+            print((UIApplication.shared.delegate as? AppDelegate)?.getHeading())
+            
             for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
             {
                 // later on prevent double spawn of stickers
                 //Networking.newStickerFromDatabase()
-                print("Key: " + String(child.key as? String ?? "none") + "Value: " + String(child.value as? Double ?? -1))
+                if let val = child.value as? Double
+                {
+                    if lat == 10000
+                    {
+                        lat = val
+                    }
+                    else
+                    {
+                        lon = val
+                    }
+                    print("Key: " + (child.key as? String ?? "none") + " Value: " + String(val))
+                } else
+                {
+                    string = child.value as? String ?? "none"
+                    print("Key: " + String(child.key as? String ?? "none") + " Value: " + string)
+                }
             }
         })
     }
@@ -104,13 +121,9 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-<<<<<<< HEAD
         let labelNode = SKLabelNode(text: ViewController.userInput)
-=======
-        let labelNode = SKLabelNode(text: userInput)
         labelNode.fontName = "Arial"
         labelNode.fontSize = 11
->>>>>>> 10217d3b1e633186e61be20ff6b923bf19633949
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;

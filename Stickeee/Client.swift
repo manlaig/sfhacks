@@ -12,9 +12,5 @@ class Client
 {
     init()
     {
-        DispatchQueue.global(qos: .background).async
-        {
-            print("This is run on the background queue")
-        }
     }
 }
