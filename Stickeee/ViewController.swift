@@ -11,6 +11,7 @@ import SpriteKit
 import ARKit
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
+    
     var userInput = ""
     
     //scene view for AR
@@ -86,6 +87,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         let labelNode = SKLabelNode(text: userInput)
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
+        
         return labelNode;
     }
     

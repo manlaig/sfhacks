@@ -13,7 +13,7 @@ import SpriteKit
 class Sticker
 {
     let anchor: ARAnchor
-    let image: String?
+    let label: String?
     let lat: Double
     let lon: Double
     
@@ -23,9 +23,8 @@ class Sticker
         lon = longitude
         
         anchor = ARAnchor(transform: transform)
-        image = SpawnManager.selectedSticker
+        label = ""
         sceneView.session.add(anchor: anchor)
         
-        SpawnManager.spawnedStickers += [self]
     }
 }
