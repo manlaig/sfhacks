@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8D5A0660A5B74FE5A114FFBB /* Pods_Stickeee.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4AB48B9D6C94D7650BD66893 /* Pods_Stickeee.framework */; };
 		ADD6AE04222B40AC00785B81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6AE03222B40AC00785B81 /* AppDelegate.swift */; };
 		ADD6AE06222B40AC00785B81 /* Scene.sks in Resources */ = {isa = PBXBuildFile; fileRef = ADD6AE05222B40AC00785B81 /* Scene.sks */; };
 		ADD6AE08222B40AC00785B81 /* Scene.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADD6AE07222B40AC00785B81 /* Scene.swift */; };
@@ -17,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0DC7C5773FB7D0A3672F6B5A /* Pods-Stickeee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeee.release.xcconfig"; path = "Target Support Files/Pods-Stickeee/Pods-Stickeee.release.xcconfig"; sourceTree = "<group>"; };
+		4AB48B9D6C94D7650BD66893 /* Pods_Stickeee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Stickeee.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD6AE00222B40AC00785B81 /* Stickeee.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stickeee.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ADD6AE03222B40AC00785B81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ADD6AE05222B40AC00785B81 /* Scene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Scene.sks; sourceTree = "<group>"; };
@@ -26,6 +29,7 @@
 		ADD6AE0E222B40AD00785B81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ADD6AE11222B40AD00785B81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ADD6AE13222B40AD00785B81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DF853E398169F3CA9B5F856F /* Pods-Stickeee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Stickeee.debug.xcconfig"; path = "Target Support Files/Pods-Stickeee/Pods-Stickeee.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -33,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8D5A0660A5B74FE5A114FFBB /* Pods_Stickeee.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E03131D214F476F1053A824 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DF853E398169F3CA9B5F856F /* Pods-Stickeee.debug.xcconfig */,
+				0DC7C5773FB7D0A3672F6B5A /* Pods-Stickeee.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 		ADD6ADF7222B40AC00785B81 = {
 			isa = PBXGroup;
 			children = (
 				ADD6AE02222B40AC00785B81 /* Stickeee */,
 				ADD6AE01222B40AC00785B81 /* Products */,
+				2E03131D214F476F1053A824 /* Pods */,
+				E43FDA09988C06F8FCC0679F /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -70,6 +87,14 @@
 			path = Stickeee;
 			sourceTree = "<group>";
 		};
+		E43FDA09988C06F8FCC0679F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4AB48B9D6C94D7650BD66893 /* Pods_Stickeee.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -77,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = ADD6AE16222B40AD00785B81 /* Build configuration list for PBXNativeTarget "Stickeee" */;
 			buildPhases = (
+				48850B71D9B7990C9EAF9298 /* [CP] Check Pods Manifest.lock */,
 				ADD6ADFC222B40AC00785B81 /* Sources */,
 				ADD6ADFD222B40AC00785B81 /* Frameworks */,
 				ADD6ADFE222B40AC00785B81 /* Resources */,
+				7B90587046DA100E3EA3A7ED /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -136,6 +163,65 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		48850B71D9B7990C9EAF9298 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Stickeee-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		7B90587046DA100E3EA3A7ED /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Stickeee/Pods-Stickeee-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/PINCache/PINCache.framework",
+				"${BUILT_PRODUCTS_DIR}/PINOperation/PINOperation.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKBitmojiKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCoreKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKCreativeKit.framework",
+				"${PODS_ROOT}/SnapSDK/SCSDKLoginKit.framework",
+				"${BUILT_PRODUCTS_DIR}/YYImage/YYImage.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINCache.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/PINOperation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKBitmojiKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCoreKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKCreativeKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SCSDKLoginKit.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/YYImage.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Stickeee/Pods-Stickeee-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		ADD6ADFC222B40AC00785B81 /* Sources */ = {
@@ -288,6 +374,7 @@
 		};
 		ADD6AE17222B40AD00785B81 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DF853E398169F3CA9B5F856F /* Pods-Stickeee.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -306,6 +393,7 @@
 		};
 		ADD6AE18222B40AD00785B81 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0DC7C5773FB7D0A3672F6B5A /* Pods-Stickeee.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;

@@ -1,0 +1,1300 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		A1C5A31F73C71B7956E1A9ACBFA251AB /* SnapSDK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = F95B4B32B4E0579DE3211967866C93E7 /* Build configuration list for PBXAggregateTarget "SnapSDK" */;
+			buildPhases = (
+			);
+			dependencies = (
+				8AEB8D3811ECDAAB647EB7F2BDD30CEB /* PBXTargetDependency */,
+				F83BB989C293AEF1DEB083F043EA9082 /* PBXTargetDependency */,
+				66C5C24E7AE0CC63B46D28A5A6788A58 /* PBXTargetDependency */,
+			);
+			name = SnapSDK;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		033E4CEF1007E4F9C6B78BED1F06ED0E /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BDFF219FA05E4D9327ABD2EFE93D049 /* CoreFoundation.framework */; };
+		03FA7A4F8F765D1E2FD8C4AE8A906B52 /* YYSpriteSheetImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 8116AD3A5FFCB157B877A70A52D66FAD /* YYSpriteSheetImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0862EF805EFD77261A122ABFD2EC24D7 /* PINOperation-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 31549F6AF4FAB84E8049A4E9252FA762 /* PINOperation-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D5EB314147EC68C95164E1F59B37A49 /* YYFrameImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 21DB91C9AE9CA16798E93F1CE714BEE5 /* YYFrameImage.m */; };
+		11F1F703671F2E3855A206F5F487BC1F /* PINOperationQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 348AF93E695C69400180CA5E8C986328 /* PINOperationQueue.m */; };
+		13D458DF5F3446070642CD2C9BFFAF33 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B6833026A603AEFDA1FD7D3E105F7DE1 /* QuartzCore.framework */; };
+		1E3CC9E4164BFC0819CE186ABFCF28FC /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DE6E58D5BDD24A7DD8BCF2F55CA828DE /* Accelerate.framework */; };
+		23915544BBEBDDCD5AAD737D9543F4B6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */; };
+		23ED78DFC50F190CB903574EA1DFF800 /* Pods-Stickeee-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E160D549A9D1B6542510F7A05146D677 /* Pods-Stickeee-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		278404895591C0F29AD2D6FC8AB98913 /* PINOperation-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4BA021A6AD2FF19E65AC3870A0522908 /* PINOperation-dummy.m */; };
+		2BF9DBDCDF85AF548FB6145907FC2B7C /* PINCache-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1969FD10926DEDA9974DE9421D463AA8 /* PINCache-dummy.m */; };
+		314DACE43E2229850A9439EC9B56EC7E /* PINOperationGroup.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CE3B5584FCA39B58D272CC22DAEDEC6 /* PINOperationGroup.m */; };
+		354C0A2E7850DB276E05639A84CC6CF2 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */; };
+		3CC70047757F825EFF5434D8E12910E7 /* YYImage.h in Headers */ = {isa = PBXBuildFile; fileRef = E5CDA06E2685CC19347930EDE255B3D2 /* YYImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		458EDD47339A0E57508C1C723A390F5C /* YYAnimatedImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1197B6BAAE63A748A372BF57803C2CCD /* YYAnimatedImageView.m */; };
+		4858785C304EAA3F49BFD43A53D4160F /* PINCache-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 57254B78FA204EA8A55185504A71C836 /* PINCache-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4965E1D6FF3E6A30FA40DF14EDF663F5 /* Nullability.h in Headers */ = {isa = PBXBuildFile; fileRef = 6485C1ABA425FA0A99773994142572CF /* Nullability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		518682201E6E7352427B0CF93CFB9C9E /* YYImageCoder.h in Headers */ = {isa = PBXBuildFile; fileRef = EABFEC7F035B79CD8320A481FB857056 /* YYImageCoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		52493378592C2DAF2FDDC2C0E55568BA /* PINDiskCache.h in Headers */ = {isa = PBXBuildFile; fileRef = EA7BC7A05F3674DD43C5655D0A7A2E57 /* PINDiskCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5CE8F8277DB207CF66B7D98D83F9EA84 /* PINOperationMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 2FA8ECA1339C54B3FB01DB4E4B915446 /* PINOperationMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		62CAE97036274D35A16A72D4BCB12A6B /* PINOperationGroup.h in Headers */ = {isa = PBXBuildFile; fileRef = 1DD987C7C5702DC3EAD29CB73AD6CFB6 /* PINOperationGroup.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D693DCCB5F3FFC0CC810B32DF8E92A5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */; };
+		74F46FDFA4FDF1CB7247E827FEE6D3BA /* PINMemoryCache.m in Sources */ = {isa = PBXBuildFile; fileRef = DAAA27487DB2ECC8B52F6CA35470E2E0 /* PINMemoryCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		7C4CBAF15CD8DFFEFB4187F3C17A1341 /* PINCache.h in Headers */ = {isa = PBXBuildFile; fileRef = CEFB2958DB250B8FAD5A139FC190B337 /* PINCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		7CE12A6D239E758329FE1879DEAC0799 /* PINOperationQueue.h in Headers */ = {isa = PBXBuildFile; fileRef = D12AB1EF059CBFF8FBBD05CE72A257CE /* PINOperationQueue.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		81BE5F5287079F8C36BBBE7E0900A928 /* PINMemoryCache.h in Headers */ = {isa = PBXBuildFile; fileRef = 61AC8B05463F9F2A2516964812535D8E /* PINMemoryCache.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		84A2163FE50D96CA5D915247D2100F28 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 961697A809E40D6241E28D9EBBBB99FA /* MobileCoreServices.framework */; };
+		98D7005AEEEE984FE5C75DCF879CA33D /* PINCache.m in Sources */ = {isa = PBXBuildFile; fileRef = B7D0E9C1E9FC518F77B5D75D133161AB /* PINCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		A19CDC5AAE34F9CF7120587D92FE1720 /* YYImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 58C0A433A75127C3D564D03917F62E77 /* YYImage.m */; };
+		B6C63371A7C41D5178A0C6E6BD7EE103 /* PINOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 75A5AF32C8587B1EEA8DB9A2520468F7 /* PINOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B8F2BA15419957313614012DE159E56B /* PINDiskCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 281612DB26120EF0F5BA04ADE86D0DD8 /* PINDiskCache.m */; settings = {COMPILER_FLAGS = "-DOS_OBJECT_USE_OBJC=0"; }; };
+		C47C7C6F01AA9F48A7064BCDC75DD2DF /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D5CFAF69C43B9BD0CB0F2271BB370441 /* AssetsLibrary.framework */; };
+		C5393C59E78D575512F4897437438FFA /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF1CA232B30D3436E6A4E28ABED0B3C7 /* ImageIO.framework */; };
+		D2D019E1600DF10904F6BE9374AF020A /* YYImage-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 851EBD4B4F69E47B49BB0652C3A44C5A /* YYImage-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		DC9D93A0EF2A5A4E8170B9DEC8A8FF10 /* YYAnimatedImageView.h in Headers */ = {isa = PBXBuildFile; fileRef = 341A304DC830EE01DDEE848A6B74C4AD /* YYAnimatedImageView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E29FA5361FD27FBABB14D45A45F833B3 /* Pods-Stickeee-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 73457D43DE07CB687243A4A8459C1448 /* Pods-Stickeee-dummy.m */; };
+		E4302073927B0C060ADA04017FB2803F /* YYImage-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 25CACBD804DB2987B7C63F28E1381E38 /* YYImage-dummy.m */; };
+		E4C8E53B9CB0164C3D3CA44770967045 /* YYFrameImage.h in Headers */ = {isa = PBXBuildFile; fileRef = 237DC2F886EB8B2EBBB570B54F035829 /* YYFrameImage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E815F1259033034F0B374E3F289EBECD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 469B6C39D8D80C6E333B44ADA123568E /* UIKit.framework */; };
+		EBF0400CB3DA4FA01F9007A4264433C5 /* YYSpriteSheetImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 99537B36040722C5FDB794DBCA03925C /* YYSpriteSheetImage.m */; };
+		ECC0947C74863804A9F9A2C26B123E29 /* PINCacheObjectSubscripting.h in Headers */ = {isa = PBXBuildFile; fileRef = C6A7D85DCAB18EE2978BFB3A9BA92B5D /* PINCacheObjectSubscripting.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EE01477961E5E035E5C64C2BE35FDE4F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */; };
+		F0BFC4EACCA6E31449C7100C42C238F1 /* YYImageCoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 4A2FFECF06D1B499C68C80E9A66FE8E7 /* YYImageCoder.m */; };
+		FF3EAAD36FA7D0DBF7790F4240A9977D /* PINOperationTypes.h in Headers */ = {isa = PBXBuildFile; fileRef = 8FCCEED864FF82002585F9878DCEBDD5 /* PINOperationTypes.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		8324C3B7F13CBA619268AE4A5E5D1376 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B482BCDB144212D798F6C75408C8416D;
+			remoteInfo = YYImage;
+		};
+		B78180A25418D6028FF4EB4FE47F9DFC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9184020C6882E3B509896838B95FF8F6;
+			remoteInfo = PINOperation;
+		};
+		C27FEC6B3210787BB2DFA11A1487E9D9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9184020C6882E3B509896838B95FF8F6;
+			remoteInfo = PINOperation;
+		};
+		C8E332B56F0682B09A5019AC14F51D0A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B482BCDB144212D798F6C75408C8416D;
+			remoteInfo = YYImage;
+		};
+		D6A772BE7AE2E199ED106FBD14D7EBDA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D50FB3EC50169B780BAE2A1FC76443CB;
+			remoteInfo = PINCache;
+		};
+		DDFEAF6AE4F101BD78A36951CEE43C3C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1C5A31F73C71B7956E1A9ACBFA251AB;
+			remoteInfo = SnapSDK;
+		};
+		FE5B06A184C519DE17CB83FE2827EEC4 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D50FB3EC50169B780BAE2A1FC76443CB;
+			remoteInfo = PINCache;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		0216383EC7508DDD8059195E83D33C5A /* YYImage-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "YYImage-Info.plist"; sourceTree = "<group>"; };
+		107E86BBFE1D1F03FAA7D89D7D7EE5B8 /* WebP.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebP.framework; path = Vendor/WebP.framework; sourceTree = "<group>"; };
+		1197B6BAAE63A748A372BF57803C2CCD /* YYAnimatedImageView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYAnimatedImageView.m; path = YYImage/YYAnimatedImageView.m; sourceTree = "<group>"; };
+		1969FD10926DEDA9974DE9421D463AA8 /* PINCache-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINCache-dummy.m"; sourceTree = "<group>"; };
+		1CE3B5584FCA39B58D272CC22DAEDEC6 /* PINOperationGroup.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationGroup.m; path = Source/PINOperationGroup.m; sourceTree = "<group>"; };
+		1DD987C7C5702DC3EAD29CB73AD6CFB6 /* PINOperationGroup.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationGroup.h; path = Source/PINOperationGroup.h; sourceTree = "<group>"; };
+		21DB91C9AE9CA16798E93F1CE714BEE5 /* YYFrameImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYFrameImage.m; path = YYImage/YYFrameImage.m; sourceTree = "<group>"; };
+		237DC2F886EB8B2EBBB570B54F035829 /* YYFrameImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYFrameImage.h; path = YYImage/YYFrameImage.h; sourceTree = "<group>"; };
+		24B817B5058E03B855FB6727D1F4CFE0 /* PINCache-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-prefix.pch"; sourceTree = "<group>"; };
+		25CACBD804DB2987B7C63F28E1381E38 /* YYImage-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "YYImage-dummy.m"; sourceTree = "<group>"; };
+		281612DB26120EF0F5BA04ADE86D0DD8 /* PINDiskCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINDiskCache.m; path = PINCache/PINDiskCache.m; sourceTree = "<group>"; };
+		2BC3217CAC20F4613CD105012671E32E /* SnapSDK.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = SnapSDK.xcconfig; sourceTree = "<group>"; };
+		2C8B92E4829B94431BEDBFD3BBCB63C6 /* Pods-Stickeee.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stickeee.debug.xcconfig"; sourceTree = "<group>"; };
+		2FA8ECA1339C54B3FB01DB4E4B915446 /* PINOperationMacros.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationMacros.h; path = Source/PINOperationMacros.h; sourceTree = "<group>"; };
+		313D0AE50C063B4B29621596081216F4 /* Pods-Stickeee-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Stickeee-acknowledgements.markdown"; sourceTree = "<group>"; };
+		31549F6AF4FAB84E8049A4E9252FA762 /* PINOperation-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-umbrella.h"; sourceTree = "<group>"; };
+		32B5DC332AFB0E2DA7CB810E742A8917 /* PINCache.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINCache.modulemap; sourceTree = "<group>"; };
+		341A304DC830EE01DDEE848A6B74C4AD /* YYAnimatedImageView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYAnimatedImageView.h; path = YYImage/YYAnimatedImageView.h; sourceTree = "<group>"; };
+		348AF93E695C69400180CA5E8C986328 /* PINOperationQueue.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINOperationQueue.m; path = Source/PINOperationQueue.m; sourceTree = "<group>"; };
+		394CF5DB918BF35A1F7303C1440C071F /* SCSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCoreKit.framework; sourceTree = "<group>"; };
+		469B6C39D8D80C6E333B44ADA123568E /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		47080FF3F54562897F46289A110B2573 /* YYImage.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = YYImage.framework; path = YYImage.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		4A2FFECF06D1B499C68C80E9A66FE8E7 /* YYImageCoder.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImageCoder.m; path = YYImage/YYImageCoder.m; sourceTree = "<group>"; };
+		4BA021A6AD2FF19E65AC3870A0522908 /* PINOperation-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PINOperation-dummy.m"; sourceTree = "<group>"; };
+		4BAB6FBAC88AFB06CA8B1ACCC1F44FB2 /* Pods-Stickeee-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Stickeee-Info.plist"; sourceTree = "<group>"; };
+		51DA0887C9CD6B87C1079D997FE6FDB3 /* PINOperation.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINOperation.xcconfig; sourceTree = "<group>"; };
+		57254B78FA204EA8A55185504A71C836 /* PINCache-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINCache-umbrella.h"; sourceTree = "<group>"; };
+		58C0A433A75127C3D564D03917F62E77 /* YYImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYImage.m; path = YYImage/YYImage.m; sourceTree = "<group>"; };
+		5BDFF219FA05E4D9327ABD2EFE93D049 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/CoreFoundation.framework; sourceTree = DEVELOPER_DIR; };
+		615695C7545BDC830A2B8996F7428193 /* Pods-Stickeee-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Stickeee-acknowledgements.plist"; sourceTree = "<group>"; };
+		61AC8B05463F9F2A2516964812535D8E /* PINMemoryCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINMemoryCache.h; path = PINCache/PINMemoryCache.h; sourceTree = "<group>"; };
+		6485C1ABA425FA0A99773994142572CF /* Nullability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = Nullability.h; path = PINCache/Nullability.h; sourceTree = "<group>"; };
+		656B0BD742E33344C2954CF22E5148CB /* PINOperation.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINOperation.framework; path = PINOperation.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		6E3CCC390DA02C9AD6B6C1F26FEC7AE8 /* PINOperation-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PINOperation-Info.plist"; sourceTree = "<group>"; };
+		73457D43DE07CB687243A4A8459C1448 /* Pods-Stickeee-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Stickeee-dummy.m"; sourceTree = "<group>"; };
+		75A5AF32C8587B1EEA8DB9A2520468F7 /* PINOperation.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperation.h; path = Source/PINOperation.h; sourceTree = "<group>"; };
+		7EBB3D41CB5B3F9CCFCADE186CBC923C /* PINCache-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "PINCache-Info.plist"; sourceTree = "<group>"; };
+		7F7996933D3420F99A712A1E46D0595F /* SCSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKLoginKit.framework; sourceTree = "<group>"; };
+		8116AD3A5FFCB157B877A70A52D66FAD /* YYSpriteSheetImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYSpriteSheetImage.h; path = YYImage/YYSpriteSheetImage.h; sourceTree = "<group>"; };
+		839524AF88EDED615E5364AB68FB2AB5 /* SCSDKBitmojiKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKBitmojiKit.framework; sourceTree = "<group>"; };
+		851EBD4B4F69E47B49BB0652C3A44C5A /* YYImage-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYImage-umbrella.h"; sourceTree = "<group>"; };
+		8FCCEED864FF82002585F9878DCEBDD5 /* PINOperationTypes.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationTypes.h; path = Source/PINOperationTypes.h; sourceTree = "<group>"; };
+		913EB5EF69A9DD536921038B3E73AAEC /* Pods-Stickeee.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Stickeee.release.xcconfig"; sourceTree = "<group>"; };
+		93886573810A37A2B00602082C3C81D2 /* SCSDKCreativeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SCSDKCreativeKit.framework; sourceTree = "<group>"; };
+		961697A809E40D6241E28D9EBBBB99FA /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/MobileCoreServices.framework; sourceTree = DEVELOPER_DIR; };
+		986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		99537B36040722C5FDB794DBCA03925C /* YYSpriteSheetImage.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = YYSpriteSheetImage.m; path = YYImage/YYSpriteSheetImage.m; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9E1B9E7A6AA6A2827DCF5F0B18166642 /* Pods-Stickeee-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Stickeee-frameworks.sh"; sourceTree = "<group>"; };
+		B2DAC1DB9FA717429FEA7D15DDB18C09 /* YYImage-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "YYImage-prefix.pch"; sourceTree = "<group>"; };
+		B44FE49351D0B1AE600C4CAC82B24D45 /* PINOperation.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = PINOperation.modulemap; sourceTree = "<group>"; };
+		B6833026A603AEFDA1FD7D3E105F7DE1 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
+		B7D0E9C1E9FC518F77B5D75D133161AB /* PINCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINCache.m; path = PINCache/PINCache.m; sourceTree = "<group>"; };
+		BF1CA232B30D3436E6A4E28ABED0B3C7 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/ImageIO.framework; sourceTree = DEVELOPER_DIR; };
+		C6A7D85DCAB18EE2978BFB3A9BA92B5D /* PINCacheObjectSubscripting.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCacheObjectSubscripting.h; path = PINCache/PINCacheObjectSubscripting.h; sourceTree = "<group>"; };
+		CA6406CCF5D07D0635E5FF56E4EDE22A /* YYImage.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = YYImage.modulemap; sourceTree = "<group>"; };
+		CAFEFE4C08166CB9E10A8A0D25581528 /* YYImage.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = YYImage.xcconfig; sourceTree = "<group>"; };
+		CEFB2958DB250B8FAD5A139FC190B337 /* PINCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINCache.h; path = PINCache/PINCache.h; sourceTree = "<group>"; };
+		D12AB1EF059CBFF8FBBD05CE72A257CE /* PINOperationQueue.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINOperationQueue.h; path = Source/PINOperationQueue.h; sourceTree = "<group>"; };
+		D5CFAF69C43B9BD0CB0F2271BB370441 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/AssetsLibrary.framework; sourceTree = DEVELOPER_DIR; };
+		D8BE632EDD6EEAD22FFEF112317075F0 /* PINOperation-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PINOperation-prefix.pch"; sourceTree = "<group>"; };
+		DAAA27487DB2ECC8B52F6CA35470E2E0 /* PINMemoryCache.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PINMemoryCache.m; path = PINCache/PINMemoryCache.m; sourceTree = "<group>"; };
+		DE6E58D5BDD24A7DD8BCF2F55CA828DE /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS12.0.sdk/System/Library/Frameworks/Accelerate.framework; sourceTree = DEVELOPER_DIR; };
+		E160D549A9D1B6542510F7A05146D677 /* Pods-Stickeee-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Stickeee-umbrella.h"; sourceTree = "<group>"; };
+		E5CDA06E2685CC19347930EDE255B3D2 /* YYImage.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImage.h; path = YYImage/YYImage.h; sourceTree = "<group>"; };
+		EA7BC7A05F3674DD43C5655D0A7A2E57 /* PINDiskCache.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PINDiskCache.h; path = PINCache/PINDiskCache.h; sourceTree = "<group>"; };
+		EABFEC7F035B79CD8320A481FB857056 /* YYImageCoder.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = YYImageCoder.h; path = YYImage/YYImageCoder.h; sourceTree = "<group>"; };
+		F3724E167CFD255FE1264F2D081C15CF /* Pods-Stickeee.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Stickeee.modulemap"; sourceTree = "<group>"; };
+		F66DEA0459D506CAD260A0DFCD8D8583 /* PINCache.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PINCache.xcconfig; sourceTree = "<group>"; };
+		FC8F741DAB3D0E53C50A1AE62F740BC6 /* Pods_Stickeee.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Stickeee.framework; path = "Pods-Stickeee.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FFCE6A0A7211E5DBA45CFEB8B59E169F /* PINCache.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = PINCache.framework; path = PINCache.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		40A0636539D5B89BDA7AE48D1FA96F07 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				354C0A2E7850DB276E05639A84CC6CF2 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		68DD169652D215CCEFF8D9836F3651EA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1E3CC9E4164BFC0819CE186ABFCF28FC /* Accelerate.framework in Frameworks */,
+				C47C7C6F01AA9F48A7064BCDC75DD2DF /* AssetsLibrary.framework in Frameworks */,
+				033E4CEF1007E4F9C6B78BED1F06ED0E /* CoreFoundation.framework in Frameworks */,
+				6D693DCCB5F3FFC0CC810B32DF8E92A5 /* Foundation.framework in Frameworks */,
+				C5393C59E78D575512F4897437438FFA /* ImageIO.framework in Frameworks */,
+				84A2163FE50D96CA5D915247D2100F28 /* MobileCoreServices.framework in Frameworks */,
+				13D458DF5F3446070642CD2C9BFFAF33 /* QuartzCore.framework in Frameworks */,
+				E815F1259033034F0B374E3F289EBECD /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ACDFF968DB9E6A639FE1DB7845ECA475 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EE01477961E5E035E5C64C2BE35FDE4F /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EF7A32E75C485483272DBF33D68E13ED /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23915544BBEBDDCD5AAD737D9543F4B6 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		03372E18D16B051EF2975C14FD674D70 /* WebP */ = {
+			isa = PBXGroup;
+			children = (
+				1D67EABA8DE738227766D22CA4F61F60 /* Frameworks */,
+			);
+			name = WebP;
+			sourceTree = "<group>";
+		};
+		03420A7C48AE1F18CFF5109E337E7272 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				B44FE49351D0B1AE600C4CAC82B24D45 /* PINOperation.modulemap */,
+				51DA0887C9CD6B87C1079D997FE6FDB3 /* PINOperation.xcconfig */,
+				4BA021A6AD2FF19E65AC3870A0522908 /* PINOperation-dummy.m */,
+				6E3CCC390DA02C9AD6B6C1F26FEC7AE8 /* PINOperation-Info.plist */,
+				D8BE632EDD6EEAD22FFEF112317075F0 /* PINOperation-prefix.pch */,
+				31549F6AF4FAB84E8049A4E9252FA762 /* PINOperation-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINOperation";
+			sourceTree = "<group>";
+		};
+		0C659CC4517C3C9D35747B67ED15DFDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				907C28E1CB9E0AF32C78F3F8F8E8EC70 /* PINCache */,
+				A3F68E0FCB473C1E2CC42378489E3C79 /* PINOperation */,
+				78275CC429EC596E12EFF6F6B1BC3120 /* SnapSDK */,
+				4594FD435BC06937110E7594CC873DA6 /* YYImage */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		14B0651AA8A2F23CCF9BA134966779F1 /* SCSDKBitmojiKit */ = {
+			isa = PBXGroup;
+			children = (
+				A4D941DFA771C41BFD5185E1708B072E /* Frameworks */,
+			);
+			name = SCSDKBitmojiKit;
+			sourceTree = "<group>";
+		};
+		1D67EABA8DE738227766D22CA4F61F60 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				107E86BBFE1D1F03FAA7D89D7D7EE5B8 /* WebP.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2979357690F586079358FD4081330764 /* SCSDKLoginKit */ = {
+			isa = PBXGroup;
+			children = (
+				657D56887A3AB1DA655D277395B6FB69 /* Frameworks */,
+			);
+			name = SCSDKLoginKit;
+			sourceTree = "<group>";
+		};
+		302BB974BCFF476A65B77DEB6D40B9DB /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B813C55DA5A701402F1DA3CAD6E4311 /* Pods-Stickeee */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		37D6541FA25472D284FB5981929F345F /* SCSDKCreativeKit */ = {
+			isa = PBXGroup;
+			children = (
+				EFA32E44DBAA41F85699C6A17B34AC3C /* Frameworks */,
+			);
+			name = SCSDKCreativeKit;
+			sourceTree = "<group>";
+		};
+		4594FD435BC06937110E7594CC873DA6 /* YYImage */ = {
+			isa = PBXGroup;
+			children = (
+				E81B983B8B35D755A8BB0A32BF498F27 /* Core */,
+				EBAD96790AEA52D16D9A1CE3195DE07F /* Support Files */,
+				03372E18D16B051EF2975C14FD674D70 /* WebP */,
+			);
+			name = YYImage;
+			path = YYImage;
+			sourceTree = "<group>";
+		};
+		4A00C8062FB2A0E9D19481EBDCB627BE /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				2BC3217CAC20F4613CD105012671E32E /* SnapSDK.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/SnapSDK";
+			sourceTree = "<group>";
+		};
+		657D56887A3AB1DA655D277395B6FB69 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7F7996933D3420F99A712A1E46D0595F /* SCSDKLoginKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		78275CC429EC596E12EFF6F6B1BC3120 /* SnapSDK */ = {
+			isa = PBXGroup;
+			children = (
+				14B0651AA8A2F23CCF9BA134966779F1 /* SCSDKBitmojiKit */,
+				37D6541FA25472D284FB5981929F345F /* SCSDKCreativeKit */,
+				2979357690F586079358FD4081330764 /* SCSDKLoginKit */,
+				4A00C8062FB2A0E9D19481EBDCB627BE /* Support Files */,
+			);
+			name = SnapSDK;
+			path = SnapSDK;
+			sourceTree = "<group>";
+		};
+		8B813C55DA5A701402F1DA3CAD6E4311 /* Pods-Stickeee */ = {
+			isa = PBXGroup;
+			children = (
+				F3724E167CFD255FE1264F2D081C15CF /* Pods-Stickeee.modulemap */,
+				313D0AE50C063B4B29621596081216F4 /* Pods-Stickeee-acknowledgements.markdown */,
+				615695C7545BDC830A2B8996F7428193 /* Pods-Stickeee-acknowledgements.plist */,
+				73457D43DE07CB687243A4A8459C1448 /* Pods-Stickeee-dummy.m */,
+				9E1B9E7A6AA6A2827DCF5F0B18166642 /* Pods-Stickeee-frameworks.sh */,
+				4BAB6FBAC88AFB06CA8B1ACCC1F44FB2 /* Pods-Stickeee-Info.plist */,
+				E160D549A9D1B6542510F7A05146D677 /* Pods-Stickeee-umbrella.h */,
+				2C8B92E4829B94431BEDBFD3BBCB63C6 /* Pods-Stickeee.debug.xcconfig */,
+				913EB5EF69A9DD536921038B3E73AAEC /* Pods-Stickeee.release.xcconfig */,
+			);
+			name = "Pods-Stickeee";
+			path = "Target Support Files/Pods-Stickeee";
+			sourceTree = "<group>";
+		};
+		907C28E1CB9E0AF32C78F3F8F8E8EC70 /* PINCache */ = {
+			isa = PBXGroup;
+			children = (
+				6485C1ABA425FA0A99773994142572CF /* Nullability.h */,
+				CEFB2958DB250B8FAD5A139FC190B337 /* PINCache.h */,
+				B7D0E9C1E9FC518F77B5D75D133161AB /* PINCache.m */,
+				C6A7D85DCAB18EE2978BFB3A9BA92B5D /* PINCacheObjectSubscripting.h */,
+				EA7BC7A05F3674DD43C5655D0A7A2E57 /* PINDiskCache.h */,
+				281612DB26120EF0F5BA04ADE86D0DD8 /* PINDiskCache.m */,
+				61AC8B05463F9F2A2516964812535D8E /* PINMemoryCache.h */,
+				DAAA27487DB2ECC8B52F6CA35470E2E0 /* PINMemoryCache.m */,
+				D9F6E02B2E4619F55D9AD62CA6A499E5 /* Support Files */,
+			);
+			name = PINCache;
+			path = PINCache;
+			sourceTree = "<group>";
+		};
+		A3F68E0FCB473C1E2CC42378489E3C79 /* PINOperation */ = {
+			isa = PBXGroup;
+			children = (
+				75A5AF32C8587B1EEA8DB9A2520468F7 /* PINOperation.h */,
+				1DD987C7C5702DC3EAD29CB73AD6CFB6 /* PINOperationGroup.h */,
+				1CE3B5584FCA39B58D272CC22DAEDEC6 /* PINOperationGroup.m */,
+				2FA8ECA1339C54B3FB01DB4E4B915446 /* PINOperationMacros.h */,
+				D12AB1EF059CBFF8FBBD05CE72A257CE /* PINOperationQueue.h */,
+				348AF93E695C69400180CA5E8C986328 /* PINOperationQueue.m */,
+				8FCCEED864FF82002585F9878DCEBDD5 /* PINOperationTypes.h */,
+				03420A7C48AE1F18CFF5109E337E7272 /* Support Files */,
+			);
+			name = PINOperation;
+			path = PINOperation;
+			sourceTree = "<group>";
+		};
+		A4D941DFA771C41BFD5185E1708B072E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				839524AF88EDED615E5364AB68FB2AB5 /* SCSDKBitmojiKit.framework */,
+				394CF5DB918BF35A1F7303C1440C071F /* SCSDKCoreKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A6BDF601D6254DA7B81FF25D8175A3CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				FFCE6A0A7211E5DBA45CFEB8B59E169F /* PINCache.framework */,
+				656B0BD742E33344C2954CF22E5148CB /* PINOperation.framework */,
+				FC8F741DAB3D0E53C50A1AE62F740BC6 /* Pods_Stickeee.framework */,
+				47080FF3F54562897F46289A110B2573 /* YYImage.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B92423E6427ED5DC33153120860F9D7B /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				DE6E58D5BDD24A7DD8BCF2F55CA828DE /* Accelerate.framework */,
+				D5CFAF69C43B9BD0CB0F2271BB370441 /* AssetsLibrary.framework */,
+				5BDFF219FA05E4D9327ABD2EFE93D049 /* CoreFoundation.framework */,
+				986E8B432CC6C803E746F5C70EA1022B /* Foundation.framework */,
+				BF1CA232B30D3436E6A4E28ABED0B3C7 /* ImageIO.framework */,
+				961697A809E40D6241E28D9EBBBB99FA /* MobileCoreServices.framework */,
+				B6833026A603AEFDA1FD7D3E105F7DE1 /* QuartzCore.framework */,
+				469B6C39D8D80C6E333B44ADA123568E /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				F119B4A0ABE017AECEE69836596133B2 /* Frameworks */,
+				0C659CC4517C3C9D35747B67ED15DFDE /* Pods */,
+				A6BDF601D6254DA7B81FF25D8175A3CD /* Products */,
+				302BB974BCFF476A65B77DEB6D40B9DB /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D9F6E02B2E4619F55D9AD62CA6A499E5 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				32B5DC332AFB0E2DA7CB810E742A8917 /* PINCache.modulemap */,
+				F66DEA0459D506CAD260A0DFCD8D8583 /* PINCache.xcconfig */,
+				1969FD10926DEDA9974DE9421D463AA8 /* PINCache-dummy.m */,
+				7EBB3D41CB5B3F9CCFCADE186CBC923C /* PINCache-Info.plist */,
+				24B817B5058E03B855FB6727D1F4CFE0 /* PINCache-prefix.pch */,
+				57254B78FA204EA8A55185504A71C836 /* PINCache-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PINCache";
+			sourceTree = "<group>";
+		};
+		E81B983B8B35D755A8BB0A32BF498F27 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				341A304DC830EE01DDEE848A6B74C4AD /* YYAnimatedImageView.h */,
+				1197B6BAAE63A748A372BF57803C2CCD /* YYAnimatedImageView.m */,
+				237DC2F886EB8B2EBBB570B54F035829 /* YYFrameImage.h */,
+				21DB91C9AE9CA16798E93F1CE714BEE5 /* YYFrameImage.m */,
+				E5CDA06E2685CC19347930EDE255B3D2 /* YYImage.h */,
+				58C0A433A75127C3D564D03917F62E77 /* YYImage.m */,
+				EABFEC7F035B79CD8320A481FB857056 /* YYImageCoder.h */,
+				4A2FFECF06D1B499C68C80E9A66FE8E7 /* YYImageCoder.m */,
+				8116AD3A5FFCB157B877A70A52D66FAD /* YYSpriteSheetImage.h */,
+				99537B36040722C5FDB794DBCA03925C /* YYSpriteSheetImage.m */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		EBAD96790AEA52D16D9A1CE3195DE07F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				CA6406CCF5D07D0635E5FF56E4EDE22A /* YYImage.modulemap */,
+				CAFEFE4C08166CB9E10A8A0D25581528 /* YYImage.xcconfig */,
+				25CACBD804DB2987B7C63F28E1381E38 /* YYImage-dummy.m */,
+				0216383EC7508DDD8059195E83D33C5A /* YYImage-Info.plist */,
+				B2DAC1DB9FA717429FEA7D15DDB18C09 /* YYImage-prefix.pch */,
+				851EBD4B4F69E47B49BB0652C3A44C5A /* YYImage-umbrella.h */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/YYImage";
+			sourceTree = "<group>";
+		};
+		EFA32E44DBAA41F85699C6A17B34AC3C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				93886573810A37A2B00602082C3C81D2 /* SCSDKCreativeKit.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F119B4A0ABE017AECEE69836596133B2 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B92423E6427ED5DC33153120860F9D7B /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		9EBBC7ECCF6E8AF636E00E53D070B43E /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4965E1D6FF3E6A30FA40DF14EDF663F5 /* Nullability.h in Headers */,
+				4858785C304EAA3F49BFD43A53D4160F /* PINCache-umbrella.h in Headers */,
+				7C4CBAF15CD8DFFEFB4187F3C17A1341 /* PINCache.h in Headers */,
+				ECC0947C74863804A9F9A2C26B123E29 /* PINCacheObjectSubscripting.h in Headers */,
+				52493378592C2DAF2FDDC2C0E55568BA /* PINDiskCache.h in Headers */,
+				81BE5F5287079F8C36BBBE7E0900A928 /* PINMemoryCache.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		E5B3AE38FDE908205AFDF00E7328FCE4 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DC9D93A0EF2A5A4E8170B9DEC8A8FF10 /* YYAnimatedImageView.h in Headers */,
+				E4C8E53B9CB0164C3D3CA44770967045 /* YYFrameImage.h in Headers */,
+				D2D019E1600DF10904F6BE9374AF020A /* YYImage-umbrella.h in Headers */,
+				3CC70047757F825EFF5434D8E12910E7 /* YYImage.h in Headers */,
+				518682201E6E7352427B0CF93CFB9C9E /* YYImageCoder.h in Headers */,
+				03FA7A4F8F765D1E2FD8C4AE8A906B52 /* YYSpriteSheetImage.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6C1C690F79E829FEAA5CD181E2C5C3C /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0862EF805EFD77261A122ABFD2EC24D7 /* PINOperation-umbrella.h in Headers */,
+				B6C63371A7C41D5178A0C6E6BD7EE103 /* PINOperation.h in Headers */,
+				62CAE97036274D35A16A72D4BCB12A6B /* PINOperationGroup.h in Headers */,
+				5CE8F8277DB207CF66B7D98D83F9EA84 /* PINOperationMacros.h in Headers */,
+				7CE12A6D239E758329FE1879DEAC0799 /* PINOperationQueue.h in Headers */,
+				FF3EAAD36FA7D0DBF7790F4240A9977D /* PINOperationTypes.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E8F54D56E65C3DEBCB571B671E5E25 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23ED78DFC50F190CB903574EA1DFF800 /* Pods-Stickeee-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0B2A1D0E3DCEDF0964E62C06C7D1E9A3 /* Pods-Stickeee */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F38CF11BC314BCEE671077697D5C4006 /* Build configuration list for PBXNativeTarget "Pods-Stickeee" */;
+			buildPhases = (
+				F9E8F54D56E65C3DEBCB571B671E5E25 /* Headers */,
+				CD28C9F5415F2F65F254FC95D380830B /* Sources */,
+				ACDFF968DB9E6A639FE1DB7845ECA475 /* Frameworks */,
+				0E1DE752AA5A8A5210526EA96E4F3F11 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				656D7E8AE8133E206FA5DBEAFF965A0A /* PBXTargetDependency */,
+				2BA266B70DC5A680E0BBF8BCBA00D3D2 /* PBXTargetDependency */,
+				7B4E6E38504A94D05708D39C8333C4B9 /* PBXTargetDependency */,
+				66EEEF7DE37CF10C4839B9FDD0A251FB /* PBXTargetDependency */,
+			);
+			name = "Pods-Stickeee";
+			productName = "Pods-Stickeee";
+			productReference = FC8F741DAB3D0E53C50A1AE62F740BC6 /* Pods_Stickeee.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		9184020C6882E3B509896838B95FF8F6 /* PINOperation */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F85A013B1576B7C0CC5C4286D6295FDA /* Build configuration list for PBXNativeTarget "PINOperation" */;
+			buildPhases = (
+				F6C1C690F79E829FEAA5CD181E2C5C3C /* Headers */,
+				5D0EB623B64AE817B5D0F4CC9EAD3AFD /* Sources */,
+				EF7A32E75C485483272DBF33D68E13ED /* Frameworks */,
+				C41D97BE2E280D0B202889517DFFD067 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PINOperation;
+			productName = PINOperation;
+			productReference = 656B0BD742E33344C2954CF22E5148CB /* PINOperation.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		B482BCDB144212D798F6C75408C8416D /* YYImage */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7CD2D3E456D428DD87DCDB6127822E0 /* Build configuration list for PBXNativeTarget "YYImage" */;
+			buildPhases = (
+				E5B3AE38FDE908205AFDF00E7328FCE4 /* Headers */,
+				3FAFC15D17FA8F0F01132E0EB81034D8 /* Sources */,
+				68DD169652D215CCEFF8D9836F3651EA /* Frameworks */,
+				BDF04FB429B14149B2DFC3B5B3281668 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = YYImage;
+			productName = YYImage;
+			productReference = 47080FF3F54562897F46289A110B2573 /* YYImage.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		D50FB3EC50169B780BAE2A1FC76443CB /* PINCache */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 25EA7230631FCE67ABC689594C86C53E /* Build configuration list for PBXNativeTarget "PINCache" */;
+			buildPhases = (
+				9EBBC7ECCF6E8AF636E00E53D070B43E /* Headers */,
+				87F5529EF3C100DE6CEAABBAB1CDA139 /* Sources */,
+				40A0636539D5B89BDA7AE48D1FA96F07 /* Frameworks */,
+				412E9E1B49CB0084F9DC04525160FBB3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PINCache;
+			productName = PINCache;
+			productReference = FFCE6A0A7211E5DBA45CFEB8B59E169F /* PINCache.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = A6BDF601D6254DA7B81FF25D8175A3CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D50FB3EC50169B780BAE2A1FC76443CB /* PINCache */,
+				9184020C6882E3B509896838B95FF8F6 /* PINOperation */,
+				0B2A1D0E3DCEDF0964E62C06C7D1E9A3 /* Pods-Stickeee */,
+				A1C5A31F73C71B7956E1A9ACBFA251AB /* SnapSDK */,
+				B482BCDB144212D798F6C75408C8416D /* YYImage */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		0E1DE752AA5A8A5210526EA96E4F3F11 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		412E9E1B49CB0084F9DC04525160FBB3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BDF04FB429B14149B2DFC3B5B3281668 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C41D97BE2E280D0B202889517DFFD067 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3FAFC15D17FA8F0F01132E0EB81034D8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				458EDD47339A0E57508C1C723A390F5C /* YYAnimatedImageView.m in Sources */,
+				0D5EB314147EC68C95164E1F59B37A49 /* YYFrameImage.m in Sources */,
+				E4302073927B0C060ADA04017FB2803F /* YYImage-dummy.m in Sources */,
+				A19CDC5AAE34F9CF7120587D92FE1720 /* YYImage.m in Sources */,
+				F0BFC4EACCA6E31449C7100C42C238F1 /* YYImageCoder.m in Sources */,
+				EBF0400CB3DA4FA01F9007A4264433C5 /* YYSpriteSheetImage.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5D0EB623B64AE817B5D0F4CC9EAD3AFD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				278404895591C0F29AD2D6FC8AB98913 /* PINOperation-dummy.m in Sources */,
+				314DACE43E2229850A9439EC9B56EC7E /* PINOperationGroup.m in Sources */,
+				11F1F703671F2E3855A206F5F487BC1F /* PINOperationQueue.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		87F5529EF3C100DE6CEAABBAB1CDA139 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2BF9DBDCDF85AF548FB6145907FC2B7C /* PINCache-dummy.m in Sources */,
+				98D7005AEEEE984FE5C75DCF879CA33D /* PINCache.m in Sources */,
+				B8F2BA15419957313614012DE159E56B /* PINDiskCache.m in Sources */,
+				74F46FDFA4FDF1CB7247E827FEE6D3BA /* PINMemoryCache.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CD28C9F5415F2F65F254FC95D380830B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E29FA5361FD27FBABB14D45A45F833B3 /* Pods-Stickeee-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2BA266B70DC5A680E0BBF8BCBA00D3D2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 9184020C6882E3B509896838B95FF8F6 /* PINOperation */;
+			targetProxy = B78180A25418D6028FF4EB4FE47F9DFC /* PBXContainerItemProxy */;
+		};
+		656D7E8AE8133E206FA5DBEAFF965A0A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = D50FB3EC50169B780BAE2A1FC76443CB /* PINCache */;
+			targetProxy = FE5B06A184C519DE17CB83FE2827EEC4 /* PBXContainerItemProxy */;
+		};
+		66C5C24E7AE0CC63B46D28A5A6788A58 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYImage;
+			target = B482BCDB144212D798F6C75408C8416D /* YYImage */;
+			targetProxy = 8324C3B7F13CBA619268AE4A5E5D1376 /* PBXContainerItemProxy */;
+		};
+		66EEEF7DE37CF10C4839B9FDD0A251FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = YYImage;
+			target = B482BCDB144212D798F6C75408C8416D /* YYImage */;
+			targetProxy = C8E332B56F0682B09A5019AC14F51D0A /* PBXContainerItemProxy */;
+		};
+		7B4E6E38504A94D05708D39C8333C4B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = SnapSDK;
+			target = A1C5A31F73C71B7956E1A9ACBFA251AB /* SnapSDK */;
+			targetProxy = DDFEAF6AE4F101BD78A36951CEE43C3C /* PBXContainerItemProxy */;
+		};
+		8AEB8D3811ECDAAB647EB7F2BDD30CEB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINCache;
+			target = D50FB3EC50169B780BAE2A1FC76443CB /* PINCache */;
+			targetProxy = D6A772BE7AE2E199ED106FBD14D7EBDA /* PBXContainerItemProxy */;
+		};
+		F83BB989C293AEF1DEB083F043EA9082 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PINOperation;
+			target = 9184020C6882E3B509896838B95FF8F6 /* PINOperation */;
+			targetProxy = C27FEC6B3210787BB2DFA11A1487E9D9 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		0FE7EF3D4F2BBFB6A8DEB2C3B41F203F /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC3217CAC20F4613CD105012671E32E /* SnapSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		124243026E782CD3D1B2E218E1E17CFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 913EB5EF69A9DD536921038B3E73AAEC /* Pods-Stickeee.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Stickeee/Pods-Stickeee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Stickeee/Pods-Stickeee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		17F1464E4BCED17DC8B190C46F7BB5A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFEFE4C08166CB9E10A8A0D25581528 /* YYImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YYImage/YYImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYImage/YYImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YYImage/YYImage.modulemap";
+				PRODUCT_MODULE_NAME = YYImage;
+				PRODUCT_NAME = YYImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		35BAC5875369FC74D657A17DF2732762 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DA0887C9CD6B87C1079D997FE6FDB3 /* PINOperation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINOperation/PINOperation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
+				PRODUCT_MODULE_NAME = PINOperation;
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		53674A6FDF5C7E4F521B2B2D084B383E /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F66DEA0459D506CAD260A0DFCD8D8583 /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/PINCache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		55792A37294681FE4FADEE4D53C4B150 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CAFEFE4C08166CB9E10A8A0D25581528 /* YYImage.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/YYImage/YYImage-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/YYImage/YYImage-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/YYImage/YYImage.modulemap";
+				PRODUCT_MODULE_NAME = YYImage;
+				PRODUCT_NAME = YYImage;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A105C1752A0A49B30ED621B71E226CDB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		C1391485F05B41BD35738A433056B7FA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		CBE8A8F19C4C18E72FD9F6C51687A1BE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2BC3217CAC20F4613CD105012671E32E /* SnapSDK.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D22B5B1BD6E17CF19686493DFE2B1E98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F66DEA0459D506CAD260A0DFCD8D8583 /* PINCache.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINCache/PINCache-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINCache/PINCache-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINCache/PINCache.modulemap";
+				PRODUCT_MODULE_NAME = PINCache;
+				PRODUCT_NAME = PINCache;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EFC8CB2DCD7C6BDA5BB4AD7035DB191C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2C8B92E4829B94431BEDBFD3BBCB63C6 /* Pods-Stickeee.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Stickeee/Pods-Stickeee-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Stickeee/Pods-Stickeee.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F84D8BE793D4EE8A79DE79D9A9C34B96 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 51DA0887C9CD6B87C1079D997FE6FDB3 /* PINOperation.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/PINOperation/PINOperation-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/PINOperation/PINOperation-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/PINOperation/PINOperation.modulemap";
+				PRODUCT_MODULE_NAME = PINOperation;
+				PRODUCT_NAME = PINOperation;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		25EA7230631FCE67ABC689594C86C53E /* Build configuration list for PBXNativeTarget "PINCache" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D22B5B1BD6E17CF19686493DFE2B1E98 /* Debug */,
+				53674A6FDF5C7E4F521B2B2D084B383E /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C1391485F05B41BD35738A433056B7FA /* Debug */,
+				A105C1752A0A49B30ED621B71E226CDB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F38CF11BC314BCEE671077697D5C4006 /* Build configuration list for PBXNativeTarget "Pods-Stickeee" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EFC8CB2DCD7C6BDA5BB4AD7035DB191C /* Debug */,
+				124243026E782CD3D1B2E218E1E17CFF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7CD2D3E456D428DD87DCDB6127822E0 /* Build configuration list for PBXNativeTarget "YYImage" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				17F1464E4BCED17DC8B190C46F7BB5A5 /* Debug */,
+				55792A37294681FE4FADEE4D53C4B150 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F85A013B1576B7C0CC5C4286D6295FDA /* Build configuration list for PBXNativeTarget "PINOperation" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F84D8BE793D4EE8A79DE79D9A9C34B96 /* Debug */,
+				35BAC5875369FC74D657A17DF2732762 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F95B4B32B4E0579DE3211967866C93E7 /* Build configuration list for PBXAggregateTarget "SnapSDK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CBE8A8F19C4C18E72FD9F6C51687A1BE /* Debug */,
+				0FE7EF3D4F2BBFB6A8DEB2C3B41F203F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
