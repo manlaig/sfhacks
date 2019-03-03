@@ -11,10 +11,12 @@ import SpriteKit
 import ARKit
 import FirebaseDatabase
 import Firebase
+import CoreLocation
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
 {
     static var userInput = ""
+    static var spawnCount = true
 
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
@@ -41,13 +43,16 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         textBox.isHidden = false //shows text box
         button.isHidden = true //hides button
         textBox.becomeFirstResponder()
+        if ViewController.spawnCount
+        {
+            ViewController.spawnCount = false
+            addListenerToDatabase()
+        }
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        addListenerToDatabase()
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -62,12 +67,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         }
 
     }
-    
-    func drawPreviousStickers()
-    {
-        let ref = Database.database().reference()
-    }
-    
+
     func addListenerToDatabase()
     {
         let ref = Database.database().reference()
@@ -77,9 +77,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
             var lat: Double = 10000
             var lon: Double = 10000
             var string: String?
-            
-            print((UIApplication.shared.delegate as? AppDelegate)?.getMagneticHeading())
-            
+
             for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
             {
                 // later on prevent double spawn of stickers
@@ -90,7 +88,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
                     {
                         lat = val
                     }
-                    else
+                    else if lon == 10000
                     {
                         lon = val
                     }
@@ -108,26 +106,32 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     
     func newStickerFromDatabase(newLat: Double, newLon: Double, label: String)
     {
+        
+        
         // Add a new sticker
         let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
         if currLocation != nil
         {
-            guard let sceneView = self.view as? ARSKView else {
+            if let sceneView = self.view as? ARSKView {
                 return
             }
             
-            
             if let currentFrame = sceneView.session.currentFrame
             {
+                print("lat: " + String(currLocation.coordinate.latitude))
                 var translation = matrix_identity_float4x4
+                //print("\n"+String(currLocation.coordinate.latitude) + " " + String(currLocation.coordinate.longitude))
+                //print("\n" + String(newLat) + " " + String(newLon))
                 
                 let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
                 
                 
-                translation.columns.3.x = Float(xy["x"]!)
-                translation.columns.3.z = Float(xy["y"]!)
+                translation.columns.3.y = Float(xy["x"]!)
+                translation.columns.3.z = Float(xy["y"]! - 0.2)
+                translation.columns.3.w = Float(1)
                 let transform = simd_mul(currentFrame.camera.transform, translation)
-                Sticker(transform: transform, sceneView: sceneView, latitude: xy["x"]!, longitude: xy["y"]!, lab: label)
+                print(currentFrame.camera.transform)
+                Sticker(transform: transform, sceneView: sceneView, latitude: xy["y"]!, longitude: xy["x"]!, lab: label)
             }
         }
     }
@@ -153,9 +157,11 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
+        
         let labelNode = SKLabelNode(text: anchor.name)
         labelNode.fontName = "Arial"
-        labelNode.fontSize = 11
+        labelNode.fontSize = 68
+        labelNode.color = UIColor.yellow
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;

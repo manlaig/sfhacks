@@ -10,6 +10,7 @@ import Foundation
 import ARKit
 import SpriteKit
 import Darwin
+import CoreLocation
 
 class Sticker
 {
@@ -29,26 +30,36 @@ class Sticker
     
     static func LatLonToMetres(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Double
     {
-        let R = 6378.137 // Radius of earth in KM
-        let dLat = lat2 * Double.pi / 180 - lat1 * Double.pi / 180;
-        let dLon = lon2 * Double.pi / 180 - lon1 * Double.pi / 180;
-        let a = sin(dLat/2) * sin(dLat/2) +
-            cos(lat1 * Double.pi / 180) * cos(lat2 * Double.pi / 180) *
-            sin(dLon/2) * sin(dLon/2);
-        let c = 2 * atan2(sqrt(a), sqrt(1-a));
-        let d = R * c;
-        return d * 1000; // meters
+        let co1 = CLLocation(latitude: lat1, longitude: lon1)
+        let co2 = CLLocation(latitude: lat2, longitude: lon2)
+        
+        return co1.distance(from: co2)
     }
     
     static func GetXY(lat1: Double, lon1: Double, lat2: Double, lon2: Double) -> Dictionary<String, Double>
     {
-        // unit vector
+        if(lon1 == lon2 && lat1 == lat2)
+        {
+            return ["x": 0, "y": 0]
+        }
+        
         let y = lat2 - lat1
         let x = lon2 - lon1
         
-        let normalizedY = y/sqrt(pow(x,2) + pow(y, 2))
-        let normalizedX = x/sqrt(pow(x,2) + pow(y, 2))
+        y / sqrt(y*y + x*x)
+        x / sqrt(y*y + x*x)
+        print("x: " + String(x) + " y: " + String(y))
+        
+        /*let heading = (UIApplication.shared.delegate as! AppDelegate).getMagneticHeading()
+        
+        var t: Double = 1.0
+        if x != 0
+        {
+            t = atan(y/x)
+        }
+        print("t: " + String(t))*/
         let dist = LatLonToMetres(lat1: lat1, lon1: lon1, lat2: lat2, lon2: lon2)
-        return ["x": normalizedX * dist, "y": normalizedY * dist]
+        print("Dist: " + String(dist))
+        return ["x": dist * y, "y": dist * x]
     }
 }

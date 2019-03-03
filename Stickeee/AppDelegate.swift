@@ -13,6 +13,7 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 {
+    
     var window: UIWindow?
     var locationManager: CLLocationManager!
     
