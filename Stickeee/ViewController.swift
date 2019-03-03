@@ -72,9 +72,9 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
             // just for max value
             var lat: Double = 10000
             var lon: Double = 10000
-            var string: String = ""
+            var string: String?
             
-            print((UIApplication.shared.delegate as? AppDelegate)?.getHeading())
+            print((UIApplication.shared.delegate as? AppDelegate)?.getMagneticHeading())
             
             for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
             {
@@ -94,10 +94,38 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
                 } else
                 {
                     string = child.value as? String ?? "none"
-                    print("Key: " + String(child.key as? String ?? "none") + " Value: " + string)
+                    print("Key: " + String(child.key as? String ?? "none") + " Value: " + string!)
                 }
             }
+            
+            self.newStickerFromDatabase(newLat: lat, newLon: lon, label: string!)
         })
+    }
+    
+    func newStickerFromDatabase(newLat: Double, newLon: Double, label: String)
+    {
+        // Add a new sticker
+        let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
+        if currLocation != nil
+        {
+            guard let sceneView = self.view as? ARSKView else {
+                return
+            }
+            
+            
+            if let currentFrame = sceneView.session.currentFrame
+            {
+                var translation = matrix_identity_float4x4
+                
+                let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
+                
+                
+                translation.columns.3.x = Float(xy["x"]!)
+                translation.columns.3.z = Float(xy["y"]!)
+                let transform = simd_mul(currentFrame.camera.transform, translation)
+                Sticker(transform: transform, sceneView: sceneView, latitude: xy["x"]!, longitude: xy["y"]!, lab: label)
+            }
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -121,7 +149,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: ViewController.userInput)
+        let labelNode = SKLabelNode(text: anchor.name)
         labelNode.fontName = "Arial"
         labelNode.fontSize = 11
         labelNode.horizontalAlignmentMode = .center

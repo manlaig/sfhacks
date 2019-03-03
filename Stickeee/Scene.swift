@@ -35,13 +35,13 @@ class Scene: SKScene {
             // Add a new sticker
             let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
             
-            if currLocation != nil
+            if currLocation != nil && ViewController.userInput != ""
             {
-                let sticker = Sticker(transform: transform, sceneView: sceneView, latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude)
+                let sticker = Sticker(transform: transform, sceneView: sceneView, latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude, lab: ViewController.userInput)
                 Networking.UploadToServer(sticker: sticker)
             } else
             {
-                print("Location null")
+                print("The sticker is null")
             }
         }
     }

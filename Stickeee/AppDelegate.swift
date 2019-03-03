@@ -18,7 +18,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
     
     func getLocation() -> CLLocation
     {
-        print("Getting location")
         var currentLocation: CLLocation!
         
         if( CLLocationManager.authorizationStatus() == .authorizedWhenInUse ||
@@ -29,13 +28,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         return currentLocation
     }
     
-    func getHeading() -> CLLocationDirection
+    func getMagneticHeading() -> CLLocationDirection
     {
-        if let dir = locationManager.heading?.trueHeading
-        {
-            return dir
-        }
-        return -1
+        return (locationManager.heading?.magneticHeading)!
     }
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
@@ -74,6 +69,5 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
-        print("Quitting application")
     }
 }

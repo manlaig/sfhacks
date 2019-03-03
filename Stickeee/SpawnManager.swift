@@ -11,7 +11,5 @@ import SpriteKit
 
 class SpawnManager
 {
-    static var selectedSticker : String = "1"
-    
     static var spawnedStickers : [Sticker] = []
 }
