@@ -19,7 +19,6 @@ class Networking
     static func UploadToServer(sticker: Sticker?)
     {
         let ref = Database.database().reference()
-        
         ref.childByAutoId().setValue(["lat": sticker?.lat, "lon": sticker?.lon, "string": sticker?.anchor.name])
     }
 }
