@@ -32,9 +32,10 @@ class Scene: SKScene {
             translation.columns.3.z = -0.2
             let transform = simd_mul(currentFrame.camera.transform, translation)
             
-            // Add a new anchor to the session
-            let anchor = ARAnchor(transform: transform)
-            sceneView.session.add(anchor: anchor)
+            // Add a new sticker
+            let sticker = Sticker(transform: transform, sceneView: sceneView)
+
+            Networking.UploadToServer(sticker: sticker)
         }
     }
 }

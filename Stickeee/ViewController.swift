@@ -17,6 +17,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        Client()
+        
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -51,18 +53,8 @@ class ViewController: UIViewController, ARSKViewDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKSpriteNode(imageNamed: "1")
-        //labelNode.horizontalAlignmentMode = .center
-        //labelNode.verticalAlignmentMode = .center
-        return labelNode;
+        return SKSpriteNode(imageNamed: SpawnManager.selectedSticker)
     }
-    
-    /*func getRandomText() -> String
-    {
-        let arr = ["A", "B", "C", "D"]
-        
-        return arr[Int.random(in: 0...3)]
-    }*/
     
     func session(_ session: ARSession, didFailWithError error: Error) {
         // Present an error message to the user
