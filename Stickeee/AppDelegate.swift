@@ -8,6 +8,7 @@
 
 import UIKit
 import CoreLocation
+import Firebase
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
@@ -37,6 +38,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.startUpdatingLocation()
         
         locationManager.requestWhenInUseAuthorization()
+        
+        FirebaseApp.configure()
         
         return true
     }

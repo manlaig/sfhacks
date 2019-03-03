@@ -9,9 +9,11 @@
 import UIKit
 import SpriteKit
 import ARKit
+import FirebaseDatabase
+import Firebase
 
 class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
-    var userInput = ""
+    static var userInput = ""
     
     //scene view for AR
     @IBOutlet var sceneView: ARSKView!
@@ -25,7 +27,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
         textBox.isHidden = true //hides text box
         button.isHidden = false //shows button
         textBox.resignFirstResponder()
-        userInput = textBox.text!
+        ViewController.userInput = textBox.text!
     }
     
     
@@ -44,9 +46,8 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        Client()
-        
-        Networking.SendToServer(endPoint: "addUser", sendrequest: "PUT")
+        //Client()
+        addListenerToDatabase()
         
         // Set the view's delegate
         sceneView.delegate = self
@@ -60,6 +61,20 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
             sceneView.presentScene(scene)
         }
 
+    }
+    
+    func addListenerToDatabase()
+    {
+        let ref = Database.database().reference()
+        
+        ref.observe(.childAdded, with: { (snapshot) -> Void in
+            for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
+            {
+                // later on prevent double spawn of stickers
+                //Networking.newStickerFromDatabase()
+                print("Key: " + String(child.key as? String ?? "none") + "Value: " + String(child.value as? Double ?? -1))
+            }
+        })
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -83,7 +98,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate {
     
     func view(_ view: ARSKView, nodeFor anchor: ARAnchor) -> SKNode? {
         // Create and configure a node for the anchor added to the view's session.
-        let labelNode = SKLabelNode(text: userInput)
+        let labelNode = SKLabelNode(text: ViewController.userInput)
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;

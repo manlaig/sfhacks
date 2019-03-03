@@ -9,65 +9,34 @@
 import Foundation
 import ARKit
 import SpriteKit
+import FirebaseDatabase
+import Firebase
 
-class Networking
+class Networking: NSObject
 {
-    static func SendToServer(endPoint: String, sendrequest: String)
-    {
-        let url = URL(string: "https://stickplace.appspot.com/" + endPoint)!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = sendrequest
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,
-                let _ = response as? HTTPURLResponse,
-                error == nil else {
-                    print("error", error ?? "Unknown error")
-                    return
-            }
-            
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
-        }
-        
-        task.resume()
-    }
-    
     static func UploadToServer(sticker: Sticker?)
     {
-        let url = URL(string: "https://stickplace.appspot.com/app")!
-        var request = URLRequest(url: url)
-        request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-        request.httpMethod = "POST"
-        let parameters: [String: Double] = [
-            "lat": sticker?.lat ?? 0,
-            "lon": sticker?.lon ?? 0
-        ]
+        let ref = Database.database().reference()
         
-        do
-        {
-            request.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: .prettyPrinted)
-        } catch {}
-        
-        let task = URLSession.shared.dataTask(with: request) { data, response, error in
-            guard let data = data,
-                let response = response as? HTTPURLResponse,
-                error == nil else {                                              // check for fundamental networking error
-                    print("error", error ?? "Unknown error")
-                    return
-            }
-            
-            /*guard (200 ... 299) ~= response.statusCode else {
-                print("statusCode should be 2xx, but is \(response.statusCode)")
-                print("response = \(response)")
-                return
-            }*/
-            
-            let responseString = String(data: data, encoding: .utf8)
-            print("responseString = \(responseString)")
-        }
-        
-        task.resume()
+        ref.childByAutoId().setValue(["lat": sticker?.lat, "lon": sticker?.lon, "string": ViewController.userInput])
     }
+    
+    /*static func newStickerFromDatabase(newLat: Double, newLon: Double)
+    {
+        var translation = matrix_identity_float4x4
+        translation.columns.3.z = -0.2
+        let transform = simd_mul(currentFrame.camera.transform, translation)
+        
+        // Add a new sticker
+        let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
+        
+        if currLocation != nil
+        {
+            let sticker = Sticker(transform: transform, sceneView: sceneView, latitude: currLocation.coordinate.latitude, longitude: currLocation.coordinate.longitude)
+            SpawnManager.spawnedStickers += [sticker]
+        } else
+        {
+            print("Location null")
+        }
+    }*/
 }
