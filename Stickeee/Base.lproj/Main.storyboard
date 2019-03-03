@@ -21,22 +21,11 @@
                             <arskView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EO5-fy-WZq">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                             </arskView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-Gv-5fp">
-                                <rect key="frame" x="147" y="180" width="80" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Click to Tye">
-                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="showButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Ff-DF-eDh"/>
-                                </connections>
-                            </button>
-                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Uk8-Ig-kaO">
+                            <textField hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="Uk8-Ig-kaO">
                                 <rect key="frame" x="0.0" y="275" width="375" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.084358808290155407" green="0.084358808290155407" blue="0.084358808290155407" alpha="0.268981073943662" colorSpace="custom" customColorSpace="sRGB"/>
-                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="SinhalaSangamMN" family="Sinhala Sangam MN" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" returnKeyType="done" enablesReturnKeyAutomatically="YES"/>
                                 <connections>
                                     <action selector="pressedEnd:" destination="BV1-FR-VrT" eventType="editingDidEnd" id="B9s-Xc-lwo"/>
@@ -44,12 +33,30 @@
                                     <action selector="pressedEnd:" destination="BV1-FR-VrT" eventType="primaryActionTriggered" id="uAa-vg-lfB"/>
                                 </connections>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hW4-Gv-5fp">
+                                <rect key="frame" x="152" y="577" width="71" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="lLQ-IA-lET"/>
+                                </constraints>
+                                <state key="normal" title="Click to Type" image="keyboard">
+                                    <color key="titleColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="showButton:" destination="BV1-FR-VrT" eventType="touchUpInside" id="1Ff-DF-eDh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hW4-Gv-5fp" secondAttribute="bottom" constant="20" symbolic="YES" id="Bfb-BP-9Pl"/>
+                            <constraint firstItem="Uk8-Ig-kaO" firstAttribute="leading" secondItem="EO5-fy-WZq" secondAttribute="leading" id="E5v-4e-kMi"/>
+                            <constraint firstItem="Uk8-Ig-kaO" firstAttribute="top" secondItem="fQZ-KI-GVf" secondAttribute="top" constant="255" id="GmW-Ag-iiH"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" id="GsS-dJ-CKf"/>
+                            <constraint firstItem="hW4-Gv-5fp" firstAttribute="centerX" secondItem="EO5-fy-WZq" secondAttribute="centerX" id="U9b-Mz-hwa"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="bottom" secondItem="fQZ-KI-GVf" secondAttribute="bottom" id="VpT-BR-CcM"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="trailing" secondItem="fQZ-KI-GVf" secondAttribute="trailing" id="XyZ-9z-H8e"/>
+                            <constraint firstItem="hW4-Gv-5fp" firstAttribute="leading" secondItem="fQZ-KI-GVf" secondAttribute="leading" constant="152" id="kI2-XL-Rw2"/>
+                            <constraint firstItem="hW4-Gv-5fp" firstAttribute="centerX" secondItem="Uk8-Ig-kaO" secondAttribute="centerX" id="nze-8Q-Of9"/>
                             <constraint firstItem="EO5-fy-WZq" firstAttribute="top" secondItem="U0K-SW-4ec" secondAttribute="top" id="rJc-2c-zQA"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="fQZ-KI-GVf"/>
@@ -65,5 +72,8 @@
             <point key="canvasLocation" x="140" y="121.88905547226388"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="keyboard" width="1200" height="1200"/>
+    </resources>
     <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>
