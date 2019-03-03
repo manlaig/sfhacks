@@ -9,5 +9,5 @@ target 'Stickeee' do
   pod 'SnapSDK'
   pod 'SwiftSocket'
   pod 'Firebase/Core'
-
+  pod 'Firebase/Database'
 end
