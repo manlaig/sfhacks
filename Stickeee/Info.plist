@@ -2,18 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>CFBundleURLSchemes</key>
-	<array>
-		<string>example</string>
-	</array>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>snapchat</string>
-	</array>
-	<key>SCSDKRedirectUrl</key>
-	<string>example://redirect</string>
-	<key>SCSDKClientId</key>
-	<string>616c0a63-31db-47a1-85ab-1d5e24dba34d</string>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -28,10 +16,18 @@
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0</string>
+	<key>CFBundleURLSchemes</key>
+	<array>
+		<string>example</string>
+	</array>
 	<key>CFBundleVersion</key>
 	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>snapchat</string>
+	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSCameraUsageDescription</key>
@@ -40,6 +36,10 @@
 	<string>I need your location</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>I need your location</string>
+	<key>SCSDKClientId</key>
+	<string>616c0a63-31db-47a1-85ab-1d5e24dba34d</string>
+	<key>SCSDKRedirectUrl</key>
+	<string>example://redirect</string>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>

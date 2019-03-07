@@ -1,11 +1,3 @@
-//
-//  Networking.swift
-//  Stickeee
-//
-//  Created by Michael Ganzorig on 3/2/19.
-//  Copyright © 2019 Michael Ganzorig. All rights reserved.
-//
-
 import Foundation
 import ARKit
 import SpriteKit
@@ -16,9 +8,9 @@ class Networking
 {
     init() {}
     
-    static func UploadToServer(sticker: Sticker?)
+    static func UploadToServer(lat: Double, lon: Double, name: String)
     {
         let ref = Database.database().reference()
-        ref.childByAutoId().setValue(["lat": sticker?.lat, "lon": sticker?.lon, "string": sticker?.anchor.name])
+        ref.childByAutoId().setValue(["lat": lat, "lon": lon, "string": name])
     }
 }

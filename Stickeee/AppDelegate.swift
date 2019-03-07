@@ -1,11 +1,3 @@
-//
-//  AppDelegate.swift
-//  Stickeee
-//
-//  Created by Michael Ganzorig on 3/2/19.
-//  Copyright © 2019 Michael Ganzorig. All rights reserved.
-//
-
 import UIKit
 import CoreLocation
 import Firebase
@@ -13,10 +5,9 @@ import Firebase
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
 {
-    
     var window: UIWindow?
     var locationManager: CLLocationManager!
-    
+
     func getLocation() -> CLLocation
     {
         var currentLocation: CLLocation!
@@ -37,7 +28,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate, CLLocationManagerDelegate
         locationManager.desiredAccuracy=kCLLocationAccuracyBest
         locationManager.startUpdatingLocation()
         locationManager.startUpdatingHeading()
-        
         locationManager.requestWhenInUseAuthorization()
         
         FirebaseApp.configure()

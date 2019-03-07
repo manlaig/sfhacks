@@ -1,11 +1,3 @@
-//
-//  ViewController.swift
-//  Stickeee
-//
-//  Created by Michael Ganzorig on 3/2/19.
-//  Copyright © 2019 Michael Ganzorig. All rights reserved.
-//
-
 import UIKit
 import SpriteKit
 import ARKit
@@ -20,21 +12,23 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     static var loaded = false
 
     //scene view for AR
-    @IBOutlet var sceneView: ARSKView!
+    @IBOutlet weak var sceneView: ARSKView!
     
     //text box
     @IBOutlet weak var textBox: UITextField!
     
     
     //after pressing done on text box
-    @IBAction func pressedEnd(_ sender: Any) {
+    @IBAction func pressedEnd(_ sender: Any)
+    {
         textBox.isHidden = true //hides text box
         button.isHidden = false //shows button
         textBox.resignFirstResponder()
         ViewController.userInput = textBox.text!
     }
     
-    @IBAction func snappybutton(_ sender: Any) {
+    @IBAction func snappybutton(_ sender: Any)
+    {
         let url = URL(string: "https://www.stickplace.net/image/getSnapChatImage")
         let sticker = SCSDKSnapSticker(stickerUrl: url!, isAnimated: false)
         let snap = SCSDKNoSnapContent()
@@ -57,11 +51,10 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
     }
     
     
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
-        
-        addListenerToDatabase()
-        
+
         // Set the view's delegate
         sceneView.delegate = self
         
@@ -73,7 +66,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         if let scene = SKScene(fileNamed: "Scene") {
             sceneView.presentScene(scene)
         }
-
+        addListenerToDatabase()
     }
 
     func addListenerToDatabase()
@@ -81,78 +74,44 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         let ref = Database.database().reference()
         
         ref.observe(.childAdded, with: { (snapshot) -> Void in
-            // just for max value
-            var lat: Double = 10000
-            var lon: Double = 10000
+            var lat: Double = 0
+            var lon: Double = 0
             var string: String?
 
             for child in snapshot.children.allObjects as? [DataSnapshot] ?? []
             {
-                // later on prevent double spawn of stickers
-                if let val = child.value as? Double
+                if child.key == "lat"
                 {
-                    if lat == 10000
-                    {
-                        lat = val
-                    }
-                    else if lon == 10000
-                    {
-                        lon = val
-                    }
-                    print("Key: " + (child.key as? String ?? "none") + " Value: " + String(val))
-                } else
+                    lat = (child.value as? Double)!
+                }
+                if child.key == "lon"
                 {
-                    string = child.value as? String ?? "none"
-                    print("Key: " + String(child.key as? String ?? "none") + " Value: " + string!)
+                    lon = (child.value as? Double)!
+                }
+                if child.key == "string"
+                {
+                    string = child.value as? String
                 }
             }
-            
-            self.newStickerFromDatabase(newLat: lat, newLon: lon, label: string!)
+            print("\nLat: " + String(lat))
+            print("Lon: " + String(lon))
+            print("String: " + string! + "\n")
+            self.newStickerFromDatabase(lat, lon, string!)
         })
     }
     
-    func newStickerFromDatabase(newLat: Double, newLon: Double, label: String)
+    func newStickerFromDatabase(_ newLat: Double, _ newLon: Double, _ label: String)
     {
-        // Add a new sticker
-        let currLocation = (UIApplication.shared.delegate as! AppDelegate).getLocation()
-        if currLocation != nil
+        if let currentFrame = sceneView.session.currentFrame
         {
-            if let sceneView = self.view as? ARSKView {
-                if let currentFrame = sceneView.session.currentFrame
-                {
-                    print("lat10: " + String(currLocation.coordinate.latitude))
-                    var translation = matrix_identity_float4x4
-                    //print("\n"+String(currLocation.coordinate.latitude) + " " + String(currLocation.coordinate.longitude))
-                    //print("\n" + String(newLat) + " " + String(newLon))
-                    
-                    let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
-                    
-                    
-                    translation.columns.3.y = Float(xy["x"]!)
-                    translation.columns.3.z = Float(xy["y"]! - 0.2)
-                    translation.columns.3.w = Float(1)
-                    let transform = simd_mul(currentFrame.camera.transform, translation)
-                    print(currentFrame.camera.transform)
-                    Sticker(transform: transform, sceneView: sceneView, latitude: xy["y"]!, longitude: xy["x"]!, lab: label)
-                }
-                return
-            }
+            let xy = Sticker.GetXY(lat2: newLat, lon2: newLon)
             
-            if let currentFrame = sceneView.session.currentFrame
-            {
-                print("lat20: " + String(currLocation.coordinate.latitude))
-                var translation = matrix_identity_float4x4
-                
-                let xy = Sticker.GetXY(lat1: currLocation.coordinate.latitude, lon1: currLocation.coordinate.longitude, lat2: newLat, lon2: newLon)
-                
-                
-                translation.columns.3.y = Float(xy["x"]!)
-                translation.columns.3.z = Float(xy["y"]! - 0.2)
-                translation.columns.3.w = Float(1)
-                let transform = simd_mul(currentFrame.camera.transform, translation)
-                print(currentFrame.camera.transform)
-                Sticker(transform: transform, sceneView: sceneView, latitude: xy["y"]!, longitude: xy["x"]!, lab: label)
-            }
+            var translation = matrix_identity_float4x4
+            translation.columns.3.z = Float(-xy["y"]! + 0.2)
+            translation.columns.3.y = Float(xy["x"]!)
+            
+            let transform = simd_mul(currentFrame.camera.transform, translation)
+            Sticker(transform, sceneView, xy["y"]!, xy["x"]!, label)
         }
     }
     
@@ -180,7 +139,7 @@ class ViewController: UIViewController, ARSKViewDelegate, UITextFieldDelegate
         
         let labelNode = SKLabelNode(text: anchor.name)
         labelNode.fontName = "Arial"
-        labelNode.fontSize = 68
+        labelNode.fontSize = 60
         labelNode.horizontalAlignmentMode = .center
         labelNode.verticalAlignmentMode = .center
         return labelNode;
