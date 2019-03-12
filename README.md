@@ -28,7 +28,9 @@ Our application solves the problem of weird signatures on the buildings by movin
 ## How we built it
 
 We integrated Google Cloud Platform's Firebase and server into the iOS ARKit application that also used Snapchat API
-Challenges we ran into
+
+
+## Challenges we ran into
 
 1. Linking a domain purchased at domain.com to the App Engine project on Google Cloud 
 2. Weird Swift features 
